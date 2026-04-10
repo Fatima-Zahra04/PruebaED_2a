@@ -7,8 +7,11 @@ package instituto;
 import java.util.TreeSet;
 
 /**
+ *Clase que representa un curso con una lista de alumnos.
+ *Permite añadir personas y mostrarlas.
  *
- * @author ProfDiurno
+ * @author ProfeDiurno
+ * @version 1.0
  */
 public class Curso {
 

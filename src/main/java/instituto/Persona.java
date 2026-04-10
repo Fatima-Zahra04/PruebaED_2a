@@ -7,6 +7,13 @@ package instituto;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.Objects;
+/**
+*Classe que representa una persona 
+*Contiene información como NIF, nombre, género y fecha de nacimiento
+*
+* @author ProfeDiurno
+* @version 1.0
+*/
 
 public class Persona implements Comparable<Persona> {
 
@@ -26,6 +33,16 @@ public class Persona implements Comparable<Persona> {
         this();
         this.nif = new Nif(nif);
     }
+    /**
+     * Constructor de Persona con datos completos.
+     * 
+     * @param nif número de identificación
+     * @param nombre nombre de la persona
+     * @param genero género ('M' o 'F')
+     * @param dia día de nacimiento
+     * @param mes mes de nacimiento
+     * @param ano año de nacimiento
+     */
 
     public Persona(int nif, String nombre, char genero,
             int dia, int mes, int ano) {
@@ -67,7 +84,13 @@ public class Persona implements Comparable<Persona> {
     public void setNacimiento(LocalDate nacimiento) {
         this.nacimiento = nacimiento;
     }
-
+    
+    /**
+     * Devuelve la edad actual de la persona.
+     * 
+     * @return edad en años
+     */
+    
     public int getEdad() {
         return Period.between(nacimiento, LocalDate.now()).getYears();
     }

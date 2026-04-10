@@ -6,7 +6,11 @@ package instituto;
 
 /**
  *
- * @author ProfDiurno
+ *Clase que representa un NIF 
+ *Calcula automáticamente la letra a partir del número
+ *
+ * @author ProfeDiurno
+ * @version 1.0
  */
 public class Nif {
 
