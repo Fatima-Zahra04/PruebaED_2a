@@ -22,31 +22,55 @@ public class Nif {
             = {'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D',
                 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L',
                 'C', 'K', 'E'};
-
+    
     private static char calcularLetra(int numero) {
         return LETRAS[numero % 23];
     }
-
+    
+    
     protected Nif() {
         this.numero = 0;
         this.letra = ' ';
     }
-
+    
+    /**
+     * Constructor por defecto. Inicializa el NIF vacío.
+     */
+    
     protected Nif(int numero) {
         this.numero = numero;
         this.letra = calcularLetra(numero);
     }
+    
+    /**
+     * Devuelve el NIF en formato "numero-letra".
+     * 
+     * @return representación en texto del NIF
+     */
 
     @Override
     public String toString() {
         return numero + "-" + letra;
     }
+    
+    /**
+     * Modifica el número del NIF y recalcula la letra.
+     * 
+     * @param numero nuevo número del NIF
+     */
 
     protected void setNif(int numero) {
         this.numero = numero;
         this.letra = calcularLetra(numero);
     }
-
+    
+    /**
+     * Compara dos objetos Nif por su número y letra.
+     * 
+     * @param obj objeto a comparar
+     * @return true si son iguales, false si no
+     */
+    
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
